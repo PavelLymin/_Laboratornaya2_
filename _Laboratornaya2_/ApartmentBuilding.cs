@@ -10,10 +10,11 @@ namespace _Laboratornaya2_
     {
         public int Floor { get; set; }
 
-        public ApartmentBuilding(string NameOwner, DateTime DateCreated, int Cost, int Floor)
+        Logic logic = new Logic();
+        public ApartmentBuilding(string NameOwner, string DateCreated, string Cost, string Floor)
             : base(NameOwner, DateCreated, Cost)
         {
-            this.Floor = Floor;
+            this.Floor = logic.IntParse(Floor);
         }
 
         public override void PrintInfo()

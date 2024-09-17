@@ -12,13 +12,13 @@ namespace _Laboratornaya2_
         public DateTime DateCreated { get; set; }
         public int Cost { get; set; }
 
-        public Realty(string NameOwner, DateTime DateCreated, int Cost)
+        Logic logic = new Logic();
+        public Realty(string NameOwner, string DateCreated, string Cost)
         {
             this.NameOwner = NameOwner;
-            this.DateCreated = DateCreated;
-            this.Cost = Cost;
+            this.DateCreated = logic.DateParse(DateCreated);
+            this.Cost = logic.IntParse(Cost);
         }
-
         public abstract void PrintInfo();
     }
 }
