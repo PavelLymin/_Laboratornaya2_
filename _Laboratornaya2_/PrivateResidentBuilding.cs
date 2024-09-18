@@ -11,7 +11,7 @@ namespace _Laboratornaya2_
         public PrivateResidentBuilding(string NameOwner, string DateCreated, string Cost)
             : base(NameOwner, DateCreated, Cost) { }
 
-        public override void PrintInfo()
+        public override void printInfo()
         {
             Console.WriteLine($"{NameOwner} {DateCreated} {Cost}");
         }

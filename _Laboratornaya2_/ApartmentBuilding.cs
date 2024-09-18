@@ -14,10 +14,10 @@ namespace _Laboratornaya2_
         public ApartmentBuilding(string NameOwner, string DateCreated, string Cost, string Floor)
             : base(NameOwner, DateCreated, Cost)
         {
-            this.Floor = logic.IntParse(Floor);
+            this.Floor = logic.intParse(Floor);
         }
 
-        public override void PrintInfo()
+        public override void printInfo()
         {
             Console.WriteLine($"{NameOwner} {DateCreated} {Cost} {Floor}");
         }

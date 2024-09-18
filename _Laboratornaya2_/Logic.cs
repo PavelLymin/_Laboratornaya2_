@@ -9,7 +9,7 @@ namespace _Laboratornaya2_
 {
     public class Logic
     {
-        public string TextFormatting(string Line) {
+        public string textFormatting(string Line) {
             int countQuotation = 0;
             string temp = "";
             for (int i = 0; i < Line.Length; i++) {
@@ -27,12 +27,12 @@ namespace _Laboratornaya2_
             return temp;
         }
 
-        public List<string> ConvertingToArray(string NewLine) {
+        public List<string> convertingToArray(string NewLine) {
             List<string> strings = NewLine.Split(new char[] { '_', '\n' }, StringSplitOptions.RemoveEmptyEntries).ToList();
             return strings;
         }
 
-        public DateTime DateParse(string dateTime) {
+        public DateTime dateParse(string dateTime) {
             DateTime dateTime1 = DateTime.MinValue;
             try {
                 dateTime1 = DateTime.ParseExact(dateTime, "yyyy.MM.dd", CultureInfo.InvariantCulture);
@@ -44,7 +44,7 @@ namespace _Laboratornaya2_
             return dateTime1;
         }
 
-        public int IntParse(string number) {
+        public int intParse(string number) {
             int temp = 0;
             try {
                 temp = int.Parse(number);
@@ -56,7 +56,7 @@ namespace _Laboratornaya2_
             return temp;
         }
 
-        public double DoubleParse(string number) {
+        public double doubleParse(string number) {
             double temp = 0;
             try {
                 temp = double.Parse(number);
@@ -68,7 +68,7 @@ namespace _Laboratornaya2_
             return temp;
         }
 
-        public List<Realty> GetListOfTypes(List<string> strings) {
+        public List<Realty> getListOfTypes(List<string> strings) {
             List<Realty> realties = new List<Realty>();
             for (int i = 0; i < strings.Count; i++) {
                 if (strings[i] == "ЧастныйЖилДом") {

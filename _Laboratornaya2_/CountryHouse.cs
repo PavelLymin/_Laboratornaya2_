@@ -14,10 +14,10 @@ namespace _Laboratornaya2_
         public CountryHouse(string NameOwner, string DateCreated, string Cost, string LandPlotArea)
             : base(NameOwner, DateCreated, Cost)
         {
-            this.LandPlotArea = logic.DoubleParse(LandPlotArea);
+            this.LandPlotArea = logic.doubleParse(LandPlotArea);
         }
 
-        public override void PrintInfo()
+        public override void printInfo()
         {
             Console.WriteLine($"{NameOwner} {DateCreated} {Cost} {LandPlotArea}");
         }

@@ -16,9 +16,9 @@ namespace _Laboratornaya2_
         public Realty(string NameOwner, string DateCreated, string Cost)
         {
             this.NameOwner = NameOwner;
-            this.DateCreated = logic.DateParse(DateCreated);
-            this.Cost = logic.IntParse(Cost);
+            this.DateCreated = logic.dateParse(DateCreated);
+            this.Cost = logic.intParse(Cost);
         }
-        public abstract void PrintInfo();
+        public abstract void printInfo();
     }
 }
