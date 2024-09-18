@@ -8,7 +8,7 @@ namespace _Laboratornaya2_
 {
     public class PrivateResidentBuilding : Realty
     {
-        public PrivateResidentBuilding(string NameOwner, string DateCreated, string Cost)
+        public PrivateResidentBuilding(string NameOwner, DateTime DateCreated, int Cost)
             : base(NameOwner, DateCreated, Cost) { }
 
         public override void printInfo()

@@ -21,8 +21,8 @@ namespace _Laboratornaya2_
                             "Новостройка \"Петр Петрович Петров\" 2020.05.06 32000 25" + '\n' +
                             "Новостройка \"Федор Федоров Федорович\" 2020.05.06 32000 5";
 
-            Logic logic = new Logic();
-            foreach (var realty in logic.getListOfTypes(logic.convertingToArray(logic.textFormatting(Stroka))))
+            Factory factory = new Factory();
+            foreach (var realty in factory.createRealty(factory.convertingToArray(factory.textFormatting(Stroka))))
             {
                 realty.printInfo();
             }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace _Laboratornaya2_
 {
-    public class Logic
+    public class Factory
     {
         public string textFormatting(string Line) {
             int countQuotation = 0;
@@ -68,19 +68,19 @@ namespace _Laboratornaya2_
             return temp;
         }
 
-        public List<Realty> getListOfTypes(List<string> strings) {
+        public List<Realty> createRealty(List<string> strings) {
             List<Realty> realties = new List<Realty>();
             for (int i = 0; i < strings.Count; i++) {
                 if (strings[i] == "ЧастныйЖилДом") {
-                    PrivateResidentBuilding realty = new PrivateResidentBuilding(strings[i + 1], strings[i + 2], strings[i + 3]);
+                    PrivateResidentBuilding realty = new PrivateResidentBuilding(strings[i + 1], dateParse(strings[i + 2]), intParse(strings[i + 3]));
                     realties.Add(realty); i += 3;
                 }
                 else if (strings[i] == "ДачныйДом") {
-                    CountryHouse realty = new CountryHouse(strings[i + 1], strings[i + 2], strings[i + 3], strings[i + 4]);
+                    CountryHouse realty = new CountryHouse(strings[i + 1], dateParse(strings[i + 2]), intParse(strings[i + 3]), doubleParse(strings[i + 4]));
                     realties.Add(realty); i += 4;
                 }
-                else if (strings[i] == "Новостройка"){
-                    ApartmentBuilding realty = new ApartmentBuilding(strings[i + 1], strings[i + 2], strings[i + 3], strings[i + 4]);
+                else if (strings[i] == "Новостройка") {
+                    ApartmentBuilding realty = new ApartmentBuilding(strings[i + 1], dateParse(strings[i + 2]), intParse(strings[i + 3]), intParse(strings[i + 4]));
                     realties.Add(realty); i += 4;
                 }
             }

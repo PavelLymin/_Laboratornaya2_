@@ -10,11 +10,10 @@ namespace _Laboratornaya2_
     {
         public double LandPlotArea { get; set; }
 
-        Logic logic = new Logic();
-        public CountryHouse(string NameOwner, string DateCreated, string Cost, string LandPlotArea)
+        public CountryHouse(string NameOwner, DateTime DateCreated, int Cost, double LandPlotArea)
             : base(NameOwner, DateCreated, Cost)
         {
-            this.LandPlotArea = logic.doubleParse(LandPlotArea);
+            this.LandPlotArea = LandPlotArea;
         }
 
         public override void printInfo()
