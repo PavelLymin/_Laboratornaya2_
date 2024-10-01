@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace _Laboratornaya2_
 {
@@ -16,9 +12,10 @@ namespace _Laboratornaya2_
             this.LandPlotArea = LandPlotArea;
         }
 
+
         public override void printInfo()
         {
-            Console.WriteLine($"{NameOwner} {DateCreated} {Cost} {LandPlotArea}");
+            Console.WriteLine($"Owner: {NameOwner}, Date: {DateCreated:dd.MM.yyyy}, Cost: {Cost}, Plot area: {LandPlotArea}");
         }
     }
 }
